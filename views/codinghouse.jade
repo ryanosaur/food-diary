@@ -3,8 +3,10 @@ doctype html
 html
   header
     title Something
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.min.js")
+    script(src="/js/script.js")
 
-  body
+  body(ng-app='quotes')
     block content
 
     footer

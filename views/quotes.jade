@@ -1,0 +1,7 @@
+ul
+  each val in quotes
+    li= val
+
+form(action='/quotes', method='POST')
+  input(type='text', name='quote')
+  button(type='submit') add to list

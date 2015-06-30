@@ -1,5 +1,10 @@
 extend codinghouse
 
 block content
-  h1
-    | This is the index
+  div(ng-controller='QuoteCtrl')
+    ul
+      li(ng-repeat='quote in quotes') {{quote}}
+
+    form.form-control(ng-submit='postQuote()')
+      input(type='text', name='quote', ng-model='quote')
+      button(type='submit') add to list
