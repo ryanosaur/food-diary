@@ -3,7 +3,8 @@ extend codinghouse
 block content
   div(ng-controller='QuoteCtrl')
     ul
-      li(ng-repeat='quote in quotes') {{quote}}
+      li(ng-repeat='quote in quotes track by $index') {{quote}} &nbsp;
+        a(href='#', ng-click='deleteQuote($index)') [X]
 
     form.form-control(ng-submit='postQuote()')
       input(type='text', name='quote', ng-model='quote')
